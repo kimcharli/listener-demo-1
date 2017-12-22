@@ -1,14 +1,15 @@
-FROM kimcharli/appformix-installer-base:0.0.1
+FROM kimcharli/appformix-installer:0.0.2
 
 LABEL maintainer="kimcharli@gmail.com"
 
 WORKDIR /root
-COPY requirements.txt setup.sh listener.py /root/
+COPY listener.py /root/
 
-RUN sh setup.sh
+RUN pip install requests[security]==2.8.1 flask==0.10.1 flask-restful==0.3.5
 
-EXPOSE 22 7070
+EXPOSE 7070
 
-ENTRYPOINT ["/usr/sbin/sshd", "-D"]
+CMD python /root/listener.py
+
 
 
