@@ -22,7 +22,7 @@ docker run --name listener -p 7070:7070 -it listener
 
 From outside, run curl command against the application in the container for connectivity
 ```sh
-curl -X POST -H "Content-Type: application/json" -d '{ "aa": "bb" }' http://<container-ip>:7703
+curl -X POST -H "Content-Type: application/json" -d '{ "aa": "bb" }' http://<container-ip>:7070
 ```
 
 
