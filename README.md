@@ -16,7 +16,7 @@ docker pull kimcharli/listener-demo-1:latest
 ### Run and test
 
 ```sh
-docker run --name listener -p 7070:7070 -it listener
+docker run --rm --name listener -p 7070:7070 -it listener
 ```
 
 
